@@ -64,10 +64,12 @@ export const styles = StyleSheet.create({
 
   counterValue: {
     fontSize: 16,
-    marginBottom: -4,
+    lineHeight: 20,
+    marginBottom: -2,
   },
 
   counterLabel: {
     fontSize: 10,
+    lineHeight: 12,
   },
 })
