@@ -329,6 +329,8 @@ PODS:
     - React-RCTText
   - ReactNativeUiLib (3.0.4):
     - React
+  - RNReactNativeHapticFeedback (1.11.0):
+    - React-Core
   - RNVectorIcons (8.1.0):
     - React-Core
   - Yoga (1.14.0)
@@ -387,6 +389,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - ReactNativeUiLib (from `../node_modules/react-native-ui-lib/lib`)
+  - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -466,6 +469,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-navigation"
   ReactNativeUiLib:
     :path: "../node_modules/react-native-ui-lib/lib"
+  RNReactNativeHapticFeedback:
+    :path: "../node_modules/react-native-haptic-feedback"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -513,6 +518,7 @@ SPEC CHECKSUMS:
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   ReactNativeNavigation: 906b631a6847c26cacf5cb3791566f1fe205c65c
   ReactNativeUiLib: cde7263a7d308b60161cd286f95c9433e79f2f7d
+  RNReactNativeHapticFeedback: 653a8c126a0f5e88ce15ffe280b3ff37e1fbb285
   RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

@@ -1,5 +1,6 @@
-import React, { FC, memo, useEffect } from 'react'
+import React, { FC, memo, useCallback, useEffect } from 'react'
 import { Animated, Easing, Insets, TouchableWithoutFeedback } from 'react-native'
+import ReactNativeHapticFeedback from 'react-native-haptic-feedback'
 
 import { Color } from '../../enums'
 import { useAnimatedValue } from '../../hooks'
@@ -18,6 +19,16 @@ const SwitchControlComponent: FC<Props> = (props) => {
 
   const animatedValue = useAnimatedValue(value ? 1 : 0)
 
+  const onPress = useCallback(() => {
+    if (!onChange) {
+      return
+    }
+
+    ReactNativeHapticFeedback.trigger('impactLight')
+
+    onChange()
+  }, [onChange])
+
   useEffect(() => {
     animatedValue.stopAnimation(() => {
       Animated.timing(animatedValue, {
@@ -30,7 +41,7 @@ const SwitchControlComponent: FC<Props> = (props) => {
   }, [animatedValue, value])
 
   return (
-    <TouchableWithoutFeedback style={styles.container} hitSlop={hitSlop} onPress={onChange}>
+    <TouchableWithoutFeedback style={styles.container} hitSlop={hitSlop} onPress={onPress}>
       <Animated.View
         style={[
           styles.switchContainer,
