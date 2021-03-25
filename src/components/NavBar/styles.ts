@@ -1,19 +1,27 @@
-import { StyleSheet } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
+
 import { Color } from '../../enums'
 
 export const styles = StyleSheet.create({
-  navBar: {
-    backgroundColor: Color.navBar,
-  },
-
   container: {
     height: 44,
     flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: 20,
   },
 
-  sideContainer: {
-    paddingHorizontal: 20,
+  modal: {
+    height: 56,
+  },
+
+  leftContainer: {
+    width: 50,
+    alignItems: 'flex-start',
+  },
+
+  rightContainer: {
+    width: 50,
+    alignItems: 'flex-end',
   },
 
   centerContainer: {
@@ -24,11 +32,16 @@ export const styles = StyleSheet.create({
 
   title: {
     fontSize: 16,
-    fontWeight: '600',
   },
 
   subtitle: {
     color: Color.subtitle,
     fontSize: 12,
+    ...Platform.select({
+      // strange font behavior on Android
+      android: {
+        lineHeight: 12,
+      },
+    }),
   },
 })
