@@ -37,19 +37,19 @@ export const styles = StyleSheet.create({
 
   optionContainer: {
     borderRadius: 15,
+    marginBottom: 8,
   },
 
   option: {
     backgroundColor: 'rgba(28, 110, 242, 0.15)',
     borderRadius: 15,
-    height: 40,
-    marginBottom: 8,
     paddingHorizontal: 15,
-    justifyContent: 'center',
+    paddingVertical: 12,
   },
 
   optionLabel: {
     fontSize: 12,
+    lineHeight: 16,
   },
 
   counterContainer: {

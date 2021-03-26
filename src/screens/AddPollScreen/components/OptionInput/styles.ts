@@ -22,4 +22,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  textInput: {
+    paddingRight: 65,
+  },
 })

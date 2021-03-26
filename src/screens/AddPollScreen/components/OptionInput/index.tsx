@@ -49,11 +49,13 @@ const OptionInputComponent: FC<Props> = (props) => {
     <View style={[styles.pollInputContainer, isNotFirst && styles.topMargin]}>
       <FormInput
         ref={handleRef}
+        style={styles.textInput}
         value={value}
         onChangeText={onChangeText}
         onSubmitEditing={onSubmitEditing}
         onKeyPress={onKeyPress}
         placeholder='Option'
+        maxLength={100}
         autoFocus={autoFocus}
         blurOnSubmit={blurOnSubmit}
       />
