@@ -50,6 +50,7 @@ const ChatScreen: ScreenFC = () => {
       <InvertedFlatList
         {...bindFlatList}
         keyboardDismissMode='interactive'
+        keyboardShouldPersistTaps='handled'
         style={styles.chatContainer}
         contentContainerStyle={styles.chatContentContainer}
         data={messages}
